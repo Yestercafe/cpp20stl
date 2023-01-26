@@ -20,5 +20,11 @@ int main()
     }
     // v | ranges::take_view(5);  // dame!!
 
+    auto iota1 = views::iota(0);
+
+    for (auto e : iota1 | views::take(10)) {
+        std::cout << e << std::endl;
+    }
+
     return 0;
 }
